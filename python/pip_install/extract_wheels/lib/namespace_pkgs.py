@@ -72,6 +72,7 @@ def add_pkgutil_style_namespace_pkg_init(dir_path: Path) -> None:
 
     if os.path.isfile(ns_pkg_init_filepath):
         raise ValueError("%s already contains an __init__.py file." % dir_path)
+    return
 
     with open(ns_pkg_init_filepath, "w") as ns_pkg_init_f:
         # See https://packaging.python.org/guides/packaging-namespace-packages/#pkgutil-style-namespace-packages
